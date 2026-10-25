@@ -1,4 +1,3 @@
-import os
 import importlib
 
 import pytest
@@ -11,16 +10,6 @@ import config
 def reload_config_after_monkeypatch(monkeypatch):
     yield
     monkeypatch.undo()
-    for name in (
-        "DB_HOST",
-        "DB_PORT",
-        "DB_NAME",
-        "DB_USER",
-        "DB_PASSWORD_SECRET_NAME",
-        "LOG_LEVEL",
-        "PORT",
-    ):
-        os.environ.pop(name, None)
     importlib.reload(config)
 
 
