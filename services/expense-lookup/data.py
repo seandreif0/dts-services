@@ -1,4 +1,4 @@
-"""Sample records. In the data centre these come from FINRPT on dtsdb-fin01.corp.dts.local."""
+"""Sample records. In production these come from the expense database configured via DB_* env vars."""
 
 RECORDS = [
     {
