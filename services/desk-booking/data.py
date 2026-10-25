@@ -1,4 +1,4 @@
-"""Sample records. In the data centre these come from FACIL on dtsdb-facil02.corp.dts.local."""
+"""Sample records. In production these come from the database configured via DB_HOST and DB_NAME."""
 
 RECORDS = [
     {
