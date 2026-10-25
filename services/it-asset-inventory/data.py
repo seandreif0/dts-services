@@ -1,4 +1,4 @@
-"""Sample records. In the data centre these come from ITAM on dtsdb-itam01.corp.dts.local."""
+"""Sample records. In production these come from the ITAM database."""
 
 RECORDS = [
     {
