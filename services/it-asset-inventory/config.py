@@ -1,11 +1,12 @@
-# it-asset-inventory settings (on-prem)
-DB_HOST = "dtsdb-itam01.corp.dts.local"
-DB_PORT = 1433
-DB_NAME = "ITAM"
-DB_USER = "itam_svc"
-DB_PASSWORD = "Assets@Rack7"
+import os
 
-LOG_FILE = "/var/log/dts/it-asset-inventory.log"
-LOG_LEVEL = "INFO"
+# it-asset-inventory settings, read from the environment
+DB_HOST = os.environ.get("DB_HOST", "")
+DB_PORT = int(os.environ.get("DB_PORT", "1433"))
+DB_NAME = os.environ.get("DB_NAME", "ITAM")
+DB_USER = os.environ.get("DB_USER", "")
+DB_PASSWORD_SECRET_NAME = os.environ.get("DB_PASSWORD_SECRET_NAME", "dts/it-asset-inventory/db")
 
-PORT = 8080
+LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO")
+
+PORT = int(os.environ.get("PORT", "8080"))
