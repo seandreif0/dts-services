@@ -1,4 +1,4 @@
-"""Sample records. In the data centre these come from BADGE on dtsdb-badge01.corp.dts.local."""
+"""Sample records. In production these come from the BADGE database."""
 
 RECORDS = [
     {

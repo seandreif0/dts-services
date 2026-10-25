@@ -1,11 +1,11 @@
-# badge-access settings (on-prem)
-DB_HOST = "dtsdb-badge01.corp.dts.local"
-DB_PORT = 1433
-DB_NAME = "BADGE"
-DB_USER = "badge_app"
-DB_PASSWORD = "Badge#2019!"
+import os
 
-LOG_FILE = "/var/log/dts/badge-access.log"
-LOG_LEVEL = "INFO"
+DB_HOST = os.environ.get("DB_HOST", "")
+DB_PORT = int(os.environ.get("DB_PORT", "1433"))
+DB_NAME = os.environ.get("DB_NAME", "BADGE")
+DB_USER = os.environ.get("DB_USER", "")
+DB_PASSWORD_SECRET_NAME = os.environ.get("DB_PASSWORD_SECRET_NAME", "dts/badge-access/db")
 
-PORT = 8080
+LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO")
+
+PORT = int(os.environ.get("PORT", "8080"))
