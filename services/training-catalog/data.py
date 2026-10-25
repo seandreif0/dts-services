@@ -1,4 +1,4 @@
-"""Sample records. In the data centre these come from LMS on dtsdb-hr03.corp.dts.local."""
+"""Sample records. In production these come from the LMS database."""
 
 RECORDS = [
     {
